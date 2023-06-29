@@ -1,5 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
+import Playground from "./components/Playground.js"
 
 /*
 💥💥💥 Rules when DECLARING a React component 💥💥💥
@@ -13,6 +14,7 @@ import { render } from 'react-dom'
   - We interpolate attribute values and content
 */
 
+
 /*
 💥💥💥 Rules when USING a React component 💥💥💥
   - Components are utilized (invoked?) so we may obtain elements
@@ -25,11 +27,16 @@ function App(props) {
   return (
     <div className='container'>
       <h1>Welcome to React, {props.track} rockstars!!</h1>
+      <h2>Instructor name: {props.name}</h2>
+      <h3>age: {props.age}</h3>
+      <Playground />
     </div>
+   
+    
   )
 }
 
 render(
-  <App track='Web' />,
+  <App track='Web' name="can" age="29" />,
   document.querySelector('#root')
 )
